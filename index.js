@@ -31,7 +31,6 @@ let playTurn = (player) => {
     prompt.start();
     prompt.get(['position'], (err, result) => {
         let res = parseInt(result.position)
-        console.log(res)
         if (checkValidMove(res)) {
             markBoard(res, player);
             printBoard();
